@@ -230,7 +230,7 @@ def register_handlers():
         except ValueError:
             return await event.reply("Usage: .boost 0-50")
 
-        if not 0 <= value <= 30:
+        if not 0 <= value <= 50:
             return await event.reply("⚠️ Boost range: 0 to 50 dB")
 
         gain_db = value
