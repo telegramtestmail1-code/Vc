@@ -17,7 +17,7 @@ logging.basicConfig(
 API_ID = int(os.environ.get("TG_API_ID", "31157048"))
 API_HASH = os.environ.get("TG_API_HASH", "ed0fea589fd64fe5985a373cb4ad9d84")
 SESSION = os.environ.get("TG_SESSION", "combined_bot")
-DEFAULT_GAIN_DB = float(os.environ.get("GAIN_DB", "12"))
+DEFAULT_GAIN_DB = float(os.environ.get("GAIN_DB", "20"))
 
 SAMPLE_RATE = 48000
 CHANNELS = 2
@@ -228,10 +228,10 @@ def register_handlers():
         try:
             value = float(parts[1])
         except ValueError:
-            return await event.reply("Usage: .boost 0-30")
+            return await event.reply("Usage: .boost 0-50")
 
         if not 0 <= value <= 30:
-            return await event.reply("⚠️ Boost range: 0 to 30 dB")
+            return await event.reply("⚠️ Boost range: 0 to 50 dB")
 
         gain_db = value
 
