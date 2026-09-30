@@ -14,9 +14,9 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(message)s",
 )
 
-API_ID = int(os.environ.get("TG_API_ID", "0"))
-API_HASH = os.environ.get("TG_API_HASH", "")
-SESSION = os.environ.get("TG_SESSION", "vc_booster")
+API_ID = int(os.environ.get("TG_API_ID", "31157048"))
+API_HASH = os.environ.get("TG_API_HASH", "ed0fea589fd64fe5985a373cb4ad9d84")
+SESSION = os.environ.get("TG_SESSION", "combined_bot")
 DEFAULT_GAIN_DB = float(os.environ.get("GAIN_DB", "12"))
 
 SAMPLE_RATE = 48000
